@@ -1,4 +1,4 @@
-* {
+*, *:before, *:after {
   box-sizing: border-box;
 }
 
@@ -16,7 +16,7 @@ body {
   height: 104px;
 }
 .logo {
-  max-width: 68px;
+  /* max-width: 68px; */
   padding: 35px 34px;
 }
 .line {
@@ -45,6 +45,25 @@ body {
   line-height: 21px;
   color: #363636;
   margin-right: 18px;
+}
+.m-menu, .search-button {
+  padding: 5px;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+}
+.mobile-buttons {
+  display: none;
+}
+.menu-line {
+  height: 2px;
+  background: #000;
+  width: 16px;
+  display: block;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  border-radius: 40px;
+  flex-basis: 16px;
 }
 .button-group {
   height: 100%;
@@ -156,6 +175,10 @@ body {
   border: 1px solid #5671F6;
   border-radius: 10px;
   margin-right: 28px;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
+  color: #5671F6;
 }
 .raiting-title {
   font-weight: bold;
@@ -173,7 +196,6 @@ body {
 .raiting-text-bold {
   font-weight: bold;
 }
-
 .cast {
   padding: 70px 0 100px;
 }
@@ -219,4 +241,197 @@ body {
 }
 .en-name {
   color: #A5A5A5;
+}
+.news {
+  background: #F3F3F3;
+  padding: 70px 0 100px;
+}
+.section-news-title {
+  font-weight: 900;
+  color: #000;
+  padding-bottom: 65px;
+}
+.news-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.news-card {
+  flex-basis: 23%;
+  background: #fff;
+  padding: 30px;
+  color: #000;
+  border-radius: 5px;
+}
+.news-date {
+  font-size: 14px;
+  line-height: 16px;
+}
+.news-title {
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+  .card-image {
+    width: 70px;
+    height: 70px;
+  }
+  .search-input {
+    margin-left: 20px;
+  }
+  .header {
+    height: 90px;
+  }
+  .sign-up {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .navigation  {
+    margin-right: 20px;
+  }
+  .navigation-link {
+    margin-right: 10px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 993px) {
+  .container {
+    max-width: 760px;
+  }
+  .search-input {
+    margin-right: auto;
+  }
+  .film-title {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+  .film-subtitle {
+    margin-bottom: 20px;
+  }
+  .film-description, .about-film {
+    margin-bottom: 30px;
+  }
+  .navigation {
+    display: none;
+  }
+  .logo {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .about-text-bold {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .card-image {
+    width: 100px;
+    height: 100px;
+  }
+  .card {
+    flex-basis: 50%;
+  }
+  .news-card {
+    flex-basis: 48%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 560px;
+  }
+  .header {
+    height: 80px;
+  }
+  .film {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+  .film-wrapper {
+    flex-wrap: wrap;
+  }
+  .film-text {
+    order: -1;
+    margin-bottom: 30px;
+  }
+  .cast, .news {
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+  .search-input, .line, .button-group {
+    display: none;
+  }
+  .mobile-buttons {
+    display: block;
+  }
+  .header {
+    padding: 0 2.5%;
+  }
+}
+@media (max-width: 576px) {
+  h2 {
+    margin: 0;
+  }
+  .container {
+    max-width: 90%;
+  }
+  .film-title {
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 12px;
+  }
+  .film-subtitle {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .film-description {
+    font-size: 14px;
+    line-height: 150%;
+    margin-bottom: 40px;
+  }
+  .about-film {
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  .about-text-bold {
+    display: inline-block;
+  }
+  .film-trailer, .poster {
+    width: 100%;
+  }
+  .film-trailer {
+    margin-bottom: 30px;
+  }
+  .film-text {
+    order: 1;
+    margin-bottom: 0;
+  }
+  .card {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+  .card-image {
+    width: 60px;
+    height: 60px;
+  }
+  .tabs {
+    margin-bottom: 35px;
+  }
+  .cast {
+    padding-top: 74px;
+    padding-bottom: 50px;
+  }
+  .news-card {
+    flex-basis: 100%;
+  }
+  .section-news-title {
+    margin: 0;
+    padding-bottom: 40px;
+  }
 }

@@ -8,12 +8,21 @@ body {
   color: #363636;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   border-bottom: 1px solid #D4D4D4;
   height: 104px;
+}
+.mob-menu {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  flex-grow: 1;
 }
 .logo {
   /* max-width: 68px; */
@@ -25,7 +34,7 @@ body {
   background: #D4D4D4;
 }
 .search-input {
-  background: url(img/search-icon.svg) no-repeat left center;
+  background: url(img/search-icon.svg) no-repeat left center #fff;
   border: none;
   padding-left: 38px;
   font-style: normal;
@@ -115,6 +124,10 @@ body {
   border-radius: 0px 0px 5px 5px;
   padding: 25px 0;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  align-items: center;
 }
 .trailer-button-icon,
 .trailer-button-text {
@@ -347,6 +360,54 @@ body {
   }
   .header {
     height: 80px;
+    padding: 0 2.5%;
+  }
+  .mob-menu {
+    position: fixed;
+    left: 0;
+    top: 68px;
+    right: 0;
+    bottom: 0;
+    background: #5671F6;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: calc(100% - 68px);
+  }
+  .mob-menu.active {
+    display: flex;
+  }
+  .button-group {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .button {
+    border-left: none;
+  }
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  .navigation-link {
+    color: #fff;
+    margin-bottom: 18px;
+    margin-right: 0;
+  }
+  .navigation-link:last-child {
+    margin-bottom: 0;
+  }
+  .search-input {
+    margin: 0;
+    width: 260px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    background-image: none;
   }
   .film {
     padding-top: 50px;
@@ -363,14 +424,18 @@ body {
     padding-top: 50px;
     padding-bottom: 70px;
   }
-  .search-input, .line, .button-group {
+  .line {
     display: none;
   }
   .mobile-buttons {
     display: block;
+    margin-left: auto;
   }
-  .header {
-    padding: 0 2.5%;
+  .sign-up {
+    background: transparent;
+    color: #fff;
+    margin-bottom: 30px;
+    
   }
 }
 @media (max-width: 576px) {
@@ -407,6 +472,7 @@ body {
   }
   .film-trailer {
     margin-bottom: 30px;
+    margin-right: 0;
   }
   .film-text {
     order: 1;

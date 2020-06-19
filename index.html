@@ -6,6 +6,7 @@
   <title>Охотники за привидениями: Наследники</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,16 +15,18 @@
       <img src="./img/logo.png" alt="logo film">
     </div>
     <div class="line"></div>
-    <input type="text" class="search-input" placeholder="Поиск по фильмам...">
-    <nav class="navigation">
-      <a href="#" class="navigation-link">Фильмы</a>
-      <a href="#" class="navigation-link">ТВ</a>
-      <a href="#" class="navigation-link">Новости</a>
-      <a href="#" class="navigation-link">О сервисе</a>
-    </nav>
-    <div class="button-group">
-      <button class="button sign-up">Регистрация</button>
-      <button class="button login">Войти</button>
+    <div class="mob-menu">
+      <input type="text" class="search-input" placeholder="Поиск по фильмам...">
+      <nav class="navigation">
+        <a href="#" class="navigation-link">Фильмы</a>
+        <a href="#" class="navigation-link">ТВ</a>
+        <a href="#" class="navigation-link">Новости</a>
+        <a href="#" class="navigation-link">О сервисе</a>
+      </nav>
+      <div class="button-group">
+        <button class="button sign-up">Регистрация</button>
+        <button class="button login">Войти</button>
+      </div>
     </div>
     <div class="mobile-buttons">
       <button class="search-button">
@@ -41,10 +44,10 @@
       <div class="film-wrapper">
         <div class="film-trailer">
           <img src="./img/poster.png" alt="poster image" class="poster">
-          <button class="trailer-button">
+          <a data-fancybox href="https://www.youtube.com/watch?v=o705uydkgew" class="trailer-button">
             <img src="./img/play.svg" alt="play" class="trailer-button-icon">
             <span class="trailer-button-text">Посмотреть трейлер</span>
-          </button>
+          </a>
         </div>
         <div class="film-text">
           <h1 class="film-title">
@@ -196,6 +199,8 @@
     </div>
   </section>
 
-  <script src="script.js"></script>
+  <script src="./js/jquery-3.5.0.min.js" defer></script>
+  <script src="./js/jquery.fancybox.min.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

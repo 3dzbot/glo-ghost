@@ -228,9 +228,15 @@ body {
   font-weight: 900;
 }
 .tabs-content {
-  display: flex;
+  display: none;
   align-items: center;
   flex-wrap: wrap;
+}
+.tabs-content.visible {
+  display: flex;
+}
+.tab {
+  cursor: pointer;
 }
 .card {
   display: flex;
@@ -284,6 +290,16 @@ body {
   font-weight: 900;
   font-size: 14px;
   line-height: 16px;
+}
+.button-next {
+  display: none;
+  background: transparent;
+  border:none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
 }
 
 @media (max-width: 1200px) {
@@ -434,8 +450,13 @@ body {
   .sign-up {
     background: transparent;
     color: #fff;
-    margin-bottom: 30px;
-    
+    margin-bottom: 30px;    
+  }
+  .news-card {
+    max-width: 90%;
+  }
+  .button-next {
+    display: block;
   }
 }
 @media (max-width: 576px) {
